@@ -1,0 +1,55 @@
+// calculator
+// variable (let-> immutable, var-> mutable)
+
+// canister => smart contract
+
+actor calc {
+  var hucre : Int = 0;
+
+  // summation
+  // function
+
+  public func ssummation(s : Int) : async Int {
+    hucre += s;
+    hucre
+
+  };
+
+  //subtraction
+  //function
+
+  public func subtraction(s : Int) : async Int {
+    hucre -=s ;
+    hucre
+
+  };
+
+  //multiplication
+  //function
+
+  public func multiplication(s : Int) : async Int {
+    hucre *= s;
+    hucre
+
+  };
+
+  //division
+  //function
+
+  public func division(s : Int) : async ?Int {
+    if (s == 0) {
+      null;
+    } else {
+      hucre /= s;
+      ?hucre;
+    };
+  };
+
+  //cleaning
+  public func cleaning() : async ()  {
+    hucre := 0;
+  } 
+
+};
+
+};
